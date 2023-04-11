@@ -8,5 +8,12 @@ def solution(x_success: int,
              x_cnt: int, 
              y_success: int, 
              y_cnt: int) -> bool:
+    
+    a = x_cnt*((x_success+y_success)/(x_cnt+y_cnt))
+    b = y_cnt*((x_success+y_success)/(x_cnt+y_cnt))
+    X=((x_success-a)/a)**2 + ((y_success-b)/b)**2
    
-    return ... # Ваш ответ, True или False
+    if X < scipy.stats.chi2.ppf(0.03, 1):
+        return True
+    else:
+        return False
