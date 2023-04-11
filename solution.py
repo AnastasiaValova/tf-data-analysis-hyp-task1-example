@@ -11,7 +11,7 @@ def solution(x_success: int,
     
     a = x_cnt*((x_success+y_success)/(x_cnt+y_cnt))
     b = y_cnt*((x_success+y_success)/(x_cnt+y_cnt))
-    X=((x_success-a)/a)**2 + ((y_success-b)/b)**2
+    X=((x_success-a)**2)/a + ((y_success-b)**2)/b
    
     if X < scipy.stats.chi2.ppf(0.03, 1):
         return True
