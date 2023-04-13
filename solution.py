@@ -3,6 +3,8 @@ import numpy as np
 from scipy import stats
 from statsmodels.stats.proportion import proportions_ztest
 
+chat_id = 225497605 # Ваш chat ID, не меняйте название переменной
+
 def solution1(x_success: int, 
              x_cnt: int, 
              y_success: int, 
